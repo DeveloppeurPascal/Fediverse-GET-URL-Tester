@@ -25,6 +25,7 @@ type
     LockScreenBackground: TRectangle;
     zLockScreen: TLayout;
     LockScreenIndicator: TAniIndicator;
+    btnWebFinger: TButton;
     procedure btnAboutClick(Sender: TObject);
     procedure OlfAboutDialog1URLClick(const AURL: string);
     procedure FormCreate(Sender: TObject);
@@ -32,6 +33,7 @@ type
     procedure btnCloseClick(Sender: TObject);
     procedure btnGETasJSONClick(Sender: TObject);
     procedure btnGETasHTMLClick(Sender: TObject);
+    procedure btnWebFingerClick(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -51,7 +53,7 @@ implementation
 
 uses
   u_urlOpen, Olf.RTL.Params, System.IOUtils, System.StrUtils, uChecksumVerif,
-  System.Net.HttpClient;
+  System.Net.HttpClient, FMX.DialogService, System.json;
 
 {$IFDEF RELEASE}
 {$I '..\_PRIVE\PrivateConsts.pas'}
@@ -204,6 +206,114 @@ begin
   LockScreenIndicator.enabled := true;
 end;
 
+procedure TfrmMain.btnWebFingerClick(Sender: TObject);
+var
+  account: string;
+  pseudo: string;
+  domain: string;
+  tab: TArray<string>;
+begin
+  TDialogService.InputQuery('WebFinger', ['Fediverse contact address'],
+    ['@user@domain'],
+    procedure(const AResult: TModalresult; const AValues: array of string)
+    begin
+      if (AResult = mrok) and (length(AValues) = 1) and
+        (not AValues[0].trim.IsEmpty) then
+      begin
+        account := AValues[0].trim;
+        if account.StartsWith('@') then
+          account := account.Substring(1);
+        tab := account.Split(['@']);
+        if length(tab) = 2 then
+        begin
+          pseudo := tab[0];
+          domain := tab[1];
+          LockScreen;
+          try
+            tthread.CreateAnonymousThread(
+              procedure
+              var
+                server: thttpclient;
+                response: ihttpresponse;
+                url: string;
+                ActivityPubUrl: string;
+                jso: tjsonobject;
+                jsa: tjsonarray;
+                jsv: tjsonvalue;
+                link: tjsonobject;
+              begin
+                try
+                  ActivityPubUrl := '';
+                  url := 'https://' + domain +
+                    '/.well-known/webfinger?resource=acct:' + pseudo +
+                    '@' + domain;
+                  server := thttpclient.Create;
+                  try
+                    server.Accept := 'application/json';
+                    response := server.Get(url);
+                    if (response.StatusCode = 200) then
+                    begin
+                      jso := tjsonobject.ParseJSONValue
+                        (response.ContentAsString) as tjsonobject;
+                      if assigned(jso) then
+                        try
+                          jsa := jso.getValue<tjsonarray>('links');
+                          if assigned(jsa) then
+                            for jsv in jsa do
+                            begin
+                              link := jsv as tjsonobject;
+                              if (link.Values['rel'].Value = 'self') and
+                                (link.Values['type']
+                                .Value = 'application/activity+json') then
+                              begin
+                                ActivityPubUrl := link.Values['href'].Value;
+                                break;
+                              end;
+                            end;
+                        finally
+                          jso.Free;
+                        end;
+                    end;
+                    tthread.Synchronize(nil,
+                      procedure
+                      begin
+                        mmoResult.Lines.Clear;
+                        mmoResult.Lines.Add('Pseudo : ' + pseudo);
+                        mmoResult.Lines.Add('Domain : ' + domain);
+                        mmoResult.Lines.Add('WebFinger : ' + url);
+                        if not ActivityPubUrl.IsEmpty then
+                        begin
+                          mmoResult.Lines.Add('ActivityPub URL : ' +
+                            ActivityPubUrl);
+                          edtURLToGet.text := ActivityPubUrl;
+                        end;
+                        mmoResult.Lines.Add('Status code : ' +
+                          response.StatusCode.tostring);
+                        mmoResult.Lines.Add('Status text : ' +
+                          response.StatusText);
+                        mmoResult.Lines.Add('');
+                        mmoResult.Lines.Add(response.ContentAsString
+                          (TEncoding.UTF8));
+                      end);
+                  finally
+                    server.Free;
+                  end;
+                finally
+                  tthread.Synchronize(nil,
+                    procedure
+                    begin
+                      UnlockScreen;
+                    end);
+                end;
+              end).Start;
+          except
+            UnlockScreen;
+          end;
+        end;
+      end;
+    end);
+end;
+
 procedure TfrmMain.OlfAboutDialog1URLClick(const AURL: string);
 begin
   url_Open_In_Browser(AURL);
@@ -224,5 +334,6 @@ initialization
   tparams.setFolderName(tpath.Combine(tpath.Combine(tpath.GetHomePath,
   'OlfSoftware'), 'FediverseGetURLTester'));
 {$ENDIF}
+TDialogService.PreferredMode := TDialogService.TPreferredMode.Async;
 
 end.
