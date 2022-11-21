@@ -27,3 +27,9 @@ Look at screen captures folder to see how this program works.
 * The button "Register" open the web browser and go to the shop.
 * The button "Close" close the program.
 * The edit field needs the URL you want to call. After filling the URL, choose if you want the result as JSON ou HTML. It changes the "Accept" header and the answer will depend on the web server you call.
+
+## Features
+
+* get answer for a URL as text/html (web pages and other contents)
+* get answer for a URL as application/ld-json (JSON LD or JSON used by ActivityPub)
+* get ActivityPub URL for a Fediverse user account from WebFinger if available on user's domain
