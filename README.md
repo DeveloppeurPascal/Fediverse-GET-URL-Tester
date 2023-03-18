@@ -14,8 +14,8 @@ The binary for Windows and Mac are available as shareware. A license can be boug
 
 The project uses those libraries as git modules :
 
-* [DeveloppeurPascal/libraries](https://github.com/DeveloppeurPascal/librairies) available for free on GitHub
-* [OlfSoftware/BoiteDeDialogueAPropos](https://developpeur-pascal.fr/boite-de-dialogue-a-propos-de.html) for the "about box" dialog available from [Gumroad](https://boutique.olfsoftware.fr/l/tolfaboutdialog-delphi-component)
+* [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) in the sub folder ./lib-externe/librairies
+* [DeveloppeurPascal/AboutDialog-Delphi-Component](https://github.com/DeveloppeurPascal/AboutDialog-Delphi-Component) in the folder ./lib-externe/AboutDialog-Delphi-Component
 
 ## How it works
 
