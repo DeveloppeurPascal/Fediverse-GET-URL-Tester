@@ -1,6 +1,6 @@
-[submodule "lib-externe/BoiteDeDialogueAPropos"]
-	path = lib-externe/BoiteDeDialogueAPropos
-	url = http://192.168.1.14:13000/OlfSoftware/BoiteDeDialogueAPropos.git
 [submodule "lib-externe/librairies"]
 	path = lib-externe/librairies
 	url = https://github.com/DeveloppeurPascal/librairies.git
+[submodule "lib-externe/AboutDialog-Delphi-Component"]
+	path = lib-externe/AboutDialog-Delphi-Component
+	url = https://github.com/DeveloppeurPascal/AboutDialog-Delphi-Component.git
