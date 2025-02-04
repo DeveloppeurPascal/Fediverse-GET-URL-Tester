@@ -52,8 +52,8 @@ implementation
 {$R *.fmx}
 
 uses
-  u_urlOpen, Olf.RTL.Params, System.IOUtils, System.StrUtils, uChecksumVerif,
-  System.Net.HttpClient, FMX.DialogService, System.json;
+  u_urlOpen, Olf.RTL.Params, System.IOUtils, System.StrUtils,
+  System.Net.HttpClient, FMX.DialogService, System.json, Olf.RTL.Checksum;
 
 {$IFDEF RELEASE}
 {$I '..\_PRIVE\PrivateConsts.pas'}
