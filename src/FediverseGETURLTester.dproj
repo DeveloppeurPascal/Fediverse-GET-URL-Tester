@@ -237,8 +237,8 @@
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <Debugger_Launcher>/usr/X11/bin/xterm -e &quot;%debuggee%&quot;</Debugger_Launcher>
-        <Icon_MainIcon>..\assets\icone\fgut.ico</Icon_MainIcon>
-        <Icns_MainIcns>..\assets\icone\fgut.icns</Icns_MainIcns>
+        <Icon_MainIcon>..\assets\icons\fgut.ico</Icon_MainIcon>
+        <Icns_MainIcns>..\assets\icons\fgut.icns</Icns_MainIcns>
         <Manifest_File>(vide)</Manifest_File>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
@@ -249,8 +249,8 @@
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <Debugger_Launcher>/usr/X11/bin/xterm -e &quot;%debuggee%&quot;</Debugger_Launcher>
-        <Icon_MainIcon>..\assets\icone\fgut.ico</Icon_MainIcon>
-        <Icns_MainIcns>..\assets\icone\fgut.icns</Icns_MainIcns>
+        <Icon_MainIcon>..\assets\icons\fgut.ico</Icon_MainIcon>
+        <Icns_MainIcns>..\assets\icons\fgut.icns</Icns_MainIcns>
         <Manifest_File>(vide)</Manifest_File>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
@@ -263,10 +263,10 @@
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=2022 Patrick Prémartin - Olf Software;LegalTrademarks=;OriginalFilename=;ProgramID=fr.olfsoftware.fediversegeturltester;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <UWP_DelphiLogo44>..\assets\icone\fgut-44x44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>..\assets\icone\fgut-150x150.png</UWP_DelphiLogo150>
-        <Icon_MainIcon>..\assets\icone\fgut.ico</Icon_MainIcon>
-        <Icns_MainIcns>..\assets\icone\fgut.icns</Icns_MainIcns>
+        <UWP_DelphiLogo44>..\assets\icons\fgut-44x44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>..\assets\icons\fgut-150x150.png</UWP_DelphiLogo150>
+        <Icon_MainIcon>..\assets\icons\fgut.ico</Icon_MainIcon>
+        <Icns_MainIcns>..\assets\icons\fgut.icns</Icns_MainIcns>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
     </PropertyGroup>
@@ -278,10 +278,10 @@
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=2022 Patrick Prémartin - Olf Software;LegalTrademarks=;OriginalFilename=;ProgramID=fr.olfsoftware.fediversegeturltester;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <UWP_DelphiLogo44>..\assets\icone\fgut-44x44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>..\assets\icone\fgut-150x150.png</UWP_DelphiLogo150>
-        <Icon_MainIcon>..\assets\icone\fgut.ico</Icon_MainIcon>
-        <Icns_MainIcns>..\assets\icone\fgut.icns</Icns_MainIcns>
+        <UWP_DelphiLogo44>..\assets\icons\fgut-44x44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>..\assets\icons\fgut-150x150.png</UWP_DelphiLogo150>
+        <Icon_MainIcon>..\assets\icons\fgut.ico</Icon_MainIcon>
+        <Icns_MainIcns>..\assets\icons\fgut.icns</Icns_MainIcns>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
     </PropertyGroup>
@@ -298,8 +298,8 @@
     <PropertyGroup Condition="'$(Cfg_1_OSX64)'!=''">
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
-        <Icon_MainIcon>..\assets\icone\fgut.ico</Icon_MainIcon>
-        <Icns_MainIcns>..\assets\icone\fgut.icns</Icns_MainIcns>
+        <Icon_MainIcon>..\assets\icons\fgut.ico</Icon_MainIcon>
+        <Icns_MainIcns>..\assets\icons\fgut.icns</Icns_MainIcns>
         <BT_BuildType>DeveloperID</BT_BuildType>
         <VerInfo_Build>1</VerInfo_Build>
         <VerInfo_Keys>CFBundleName=$(MSBuildProjectName);CFBundleDisplayName=$(MSBuildProjectName);CFBundleIdentifier=fr.olfsoftware.fediversegeturltester;CFBundleVersion=1.0.1;CFBundleShortVersionString=1.0.0;CFBundlePackageType=APPL;CFBundleSignature=????;CFBundleAllowMixedLocalizations=YES;CFBundleExecutable=$(MSBuildProjectName);NSHighResolutionCapable=true;LSApplicationCategoryType=public.app-category.utilities;NSLocationUsageDescription=The reason for accessing the location information of the user;NSContactsUsageDescription=The reason for accessing the contacts;NSCalendarsUsageDescription=The reason for accessing the calendar data;NSRemindersUsageDescription=The reason for accessing the reminders;NSCameraUsageDescription=The reason for accessing the camera;NSMicrophoneUsageDescription=The reason for accessing the microphone;NSMotionUsageDescription=The reason for accessing the accelerometer;NSDesktopFolderUsageDescription=The reason for accessing the Desktop folder;NSDocumentsFolderUsageDescription=The reason for accessing the Documents folder;NSDownloadsFolderUsageDescription=The reason for accessing the Downloads folder;NSNetworkVolumesUsageDescription=The reason for accessing files on a network volume;NSRemovableVolumesUsageDescription=The reason for accessing files on a removable volume;NSSpeechRecognitionUsageDescription=The reason for requesting to send user data to Apple&apos;s speech recognition servers;ITSAppUsesNonExemptEncryption=false;NSBluetoothAlwaysUsageDescription=The reason for accessing the Bluetooth interface</VerInfo_Keys>
@@ -322,8 +322,8 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <Icon_MainIcon>..\assets\icone\fgut.ico</Icon_MainIcon>
-        <Icns_MainIcns>..\assets\icone\fgut.icns</Icns_MainIcns>
+        <Icon_MainIcon>..\assets\icons\fgut.ico</Icon_MainIcon>
+        <Icns_MainIcns>..\assets\icons\fgut.icns</Icns_MainIcns>
         <BT_BuildType>AppStore</BT_BuildType>
         <VerInfo_Build>1</VerInfo_Build>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.1;InternalName=;LegalCopyright=2022 Patrick Prémartin - Olf Software;LegalTrademarks=;OriginalFilename=;ProgramID=fr.olfsoftware.fediversegeturltester;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -346,8 +346,8 @@
         <DCC_GenerateOSXUniversalBinaryFile>true</DCC_GenerateOSXUniversalBinaryFile>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
-        <Icon_MainIcon>..\assets\icone\fgut.ico</Icon_MainIcon>
-        <Icns_MainIcns>..\assets\icone\fgut.icns</Icns_MainIcns>
+        <Icon_MainIcon>..\assets\icons\fgut.ico</Icon_MainIcon>
+        <Icns_MainIcns>..\assets\icons\fgut.icns</Icns_MainIcns>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
@@ -363,8 +363,8 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <Icon_MainIcon>..\assets\icone\fgut.ico</Icon_MainIcon>
-        <Icns_MainIcns>..\assets\icone\fgut.icns</Icns_MainIcns>
+        <Icon_MainIcon>..\assets\icons\fgut.ico</Icon_MainIcon>
+        <Icns_MainIcns>..\assets\icons\fgut.icns</Icns_MainIcns>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -426,18 +426,18 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\assets\icone\fgut-150x150.png" Configuration="Debug" Class="UWP_DelphiLogo150"/>
-                <DeployFile LocalName="..\assets\icone\fgut-150x150.png" Configuration="Debug" Class="UWP_DelphiLogo150"/>
-                <DeployFile LocalName="..\assets\icone\fgut-150x150.png" Configuration="Release" Class="UWP_DelphiLogo150"/>
-                <DeployFile LocalName="..\assets\icone\fgut-150x150.png" Configuration="Release" Class="UWP_DelphiLogo150"/>
-                <DeployFile LocalName="..\assets\icone\fgut-44x44.png" Configuration="Debug" Class="UWP_DelphiLogo44"/>
-                <DeployFile LocalName="..\assets\icone\fgut-44x44.png" Configuration="Debug" Class="UWP_DelphiLogo44"/>
-                <DeployFile LocalName="..\assets\icone\fgut-44x44.png" Configuration="Release" Class="UWP_DelphiLogo44"/>
-                <DeployFile LocalName="..\assets\icone\fgut-44x44.png" Configuration="Release" Class="UWP_DelphiLogo44"/>
-                <DeployFile LocalName="..\assets\icone\fgut.icns" Configuration="Debug" Class="ProjectOSXResource"/>
-                <DeployFile LocalName="..\assets\icone\fgut.icns" Configuration="Debug" Class="ProjectOSXResource"/>
-                <DeployFile LocalName="..\assets\icone\fgut.icns" Configuration="Release" Class="ProjectOSXResource"/>
-                <DeployFile LocalName="..\assets\icone\fgut.icns" Configuration="Release" Class="ProjectOSXResource"/>
+                <DeployFile LocalName="..\assets\icons\fgut-150x150.png" Configuration="Debug" Class="UWP_DelphiLogo150"/>
+                <DeployFile LocalName="..\assets\icons\fgut-150x150.png" Configuration="Debug" Class="UWP_DelphiLogo150"/>
+                <DeployFile LocalName="..\assets\icons\fgut-150x150.png" Configuration="Release" Class="UWP_DelphiLogo150"/>
+                <DeployFile LocalName="..\assets\icons\fgut-150x150.png" Configuration="Release" Class="UWP_DelphiLogo150"/>
+                <DeployFile LocalName="..\assets\icons\fgut-44x44.png" Configuration="Debug" Class="UWP_DelphiLogo44"/>
+                <DeployFile LocalName="..\assets\icons\fgut-44x44.png" Configuration="Debug" Class="UWP_DelphiLogo44"/>
+                <DeployFile LocalName="..\assets\icons\fgut-44x44.png" Configuration="Release" Class="UWP_DelphiLogo44"/>
+                <DeployFile LocalName="..\assets\icons\fgut-44x44.png" Configuration="Release" Class="UWP_DelphiLogo44"/>
+                <DeployFile LocalName="..\assets\icons\fgut.icns" Configuration="Debug" Class="ProjectOSXResource"/>
+                <DeployFile LocalName="..\assets\icons\fgut.icns" Configuration="Debug" Class="ProjectOSXResource"/>
+                <DeployFile LocalName="..\assets\icons\fgut.icns" Configuration="Release" Class="ProjectOSXResource"/>
+                <DeployFile LocalName="..\assets\icons\fgut.icns" Configuration="Release" Class="ProjectOSXResource"/>
                 <DeployFile LocalName="OSX64\Debug\FediverseGETURLTester.entitlements" Configuration="Debug" Class="ProjectOSXEntitlements"/>
                 <DeployFile LocalName="OSX64\Debug\FediverseGETURLTester.info.plist" Configuration="Debug" Class="ProjectOSXInfoPList"/>
                 <DeployFile LocalName="OSX64\Debug\FediverseGETURLTester" Configuration="Debug" Class="ProjectOutput"/>
